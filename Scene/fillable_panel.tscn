@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://coednr38l5s6t"]
+
+[ext_resource type="PackedScene" uid="uid://cvqlvkavrixmg" path="res://Scene/moveable_panel.tscn" id="1_hxeuj"]
+[ext_resource type="Script" path="res://Scene/fillable_panel.gd" id="2_rbck8"]
+
+[node name="FillablePanel" instance=ExtResource("1_hxeuj")]
+script = ExtResource("2_rbck8")
+
+[node name="Label" parent="MarginContainer" index="0"]
+visible = false
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer" index="1"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/minimum_character_width = 2
+
+[connection signal="text_changed" from="MarginContainer/LineEdit" to="." method="_on_line_edit_text_changed"]

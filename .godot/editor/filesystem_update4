@@ -1,0 +1,8 @@
+res://code_gap_filler.tscn
+res://code_gap_filler.gd
+res://Scene/modular_panel.tscn
+res://Scene/modular_panel.gd
+res://Scene/moveable_panel.tscn
+res://Scene/moveable_panel.gd
+res://Scene/fillable_panel.tscn
+res://Scene/fillable_panel.gd

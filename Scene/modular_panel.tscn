@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://b42gnqjgjbdn4"]
+
+[ext_resource type="Script" path="res://Scene/modular_panel.gd" id="1_o45dm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y41vu"]
+bg_color = Color(0.242305, 0.464139, 0.260017, 1)
+
+[sub_resource type="Theme" id="Theme_c7ina"]
+default_font_size = 32
+HBoxContainer/constants/separation = 8
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_y41vu")
+
+[node name="ModularPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_c7ina")
+script = ExtResource("1_o45dm")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CodeLineHolder" type="VBoxContainer" parent="Panel/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
